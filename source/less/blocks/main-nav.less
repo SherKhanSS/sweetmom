@@ -1,14 +1,5 @@
 .main-nav {
-  font-size: 17px;
-  font-weight: bold;
-  line-height: normal;
-  background-color: @st;
-
-  position: relative;
-
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 10px;
+position: relative;
 }
 
 .main-nav__list {
@@ -46,18 +37,33 @@
    width: 40px;
    height: 4px;
 
-   background-color: @text;
-   box-shadow: 0 10px 0 0 @text, 0 20px 0 0 @text;
+   background-color: @white;
+   box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+ }
+
+ .main-nav--closed .main-nav__toggle::after {
+   content: "";
+
+   position: absolute;
+   top: -2px;
+   left: 5px;
+
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   z-index: -1;
+
+   background-color: @pink-fon;
  }
 
 .main-nav--closed .main-nav__toggle:hover::before {
-  background-color: @hov;
-  box-shadow: 0 10px 0 0 @hov, 0 20px 0 0 @hov;
+  background-color: @white;
+  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: @st;
-  box-shadow: 0 10px 0 0 @st, 0 20px 0 0 @st;
+  background-color: @black;
+  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
  .main-nav--opened .main-nav__toggle {
@@ -76,7 +82,7 @@
      width: 30px;
      height: 4px;
 
-     background-color: @text;
+     background-color: @white;
      // opacity: 0.5;
    }
 
@@ -91,12 +97,12 @@
 
    &:hover::before,
    &:hover::after {
-     background-color: @hov;
+     background-color: @black;
    }
 
    &:active::before,
    &:active::after {
-     background-color: @st;
+     background-color: @black;
    }
 }
 
@@ -130,10 +136,8 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    border-top: 1px solid #bfe0ed;
-    border-bottom: 1px solid #bfe0ed;
-    padding-left: 20px;
   }
+
   .main-nav__toggle {
   display: none;
 }
@@ -143,8 +147,5 @@
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav {
-    font-size: 20px;
-  }
 
 }
