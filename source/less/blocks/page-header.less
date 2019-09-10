@@ -1,10 +1,22 @@
 .page-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin: 0 auto;
+  .flex-mobile();
   background-color: @fon;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 15px 20px 15px;
+}
+
+.page-header--scroll {
+
+}
+
+.page-header__logo {
+  align-self: flex-start;
+  background-color: @white;
+  padding: 15px;
+  border-radius: 0 0 20px 20px;
 }
 
 .page-header__link {
@@ -34,6 +46,19 @@
   background-image: url("../img/tel11x16.png");
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0px;
+
+  width: 100%;
+  height: 12px;
+
+  background-color: #e4dccc;
+  box-shadow: inset 0px 3px 8px 2px rgba(194,186,170,1);
 }
 
 @media (max-width: @mobile-width-only) {

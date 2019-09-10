@@ -37,73 +37,31 @@ position: relative;
    width: 40px;
    height: 4px;
 
-   background-color: @white;
-   box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
+   background-image: url("../img/tel11x16.png");
+   background-repeat: no-repeat;
+   background-position: 0 0;
  }
 
- .main-nav--closed .main-nav__toggle::after {
-   content: "";
-
-   position: absolute;
-   top: -2px;
-   left: 5px;
-
-   width: 60px;
-   height: 60px;
-   border-radius: 50%;
-   z-index: -1;
-
-   background-color: @pink-fon;
- }
 
 .main-nav--closed .main-nav__toggle:hover::before {
-  background-color: @white;
-  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: @black;
-  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
  .main-nav--opened .main-nav__toggle {
-   top: -50;
-   right: 0;
-   left: auto;
+   content: "";
 
-   &::before,
-   &::after {
-     content: "";
+   position: absolute;
+   top: 15px;
+   left: 15px;
 
-     position: absolute;
-     top: 25px;
-     right: 20px;
+   width: 40px;
+   height: 4px;
 
-     width: 30px;
-     height: 4px;
-
-     background-color: @white;
-     // opacity: 0.5;
-   }
-
-   &::before {
-     transform: rotate(45deg);
-     box-shadow: none;
-   }
-
-   &::after {
-     transform: rotate(-45deg);
-   }
-
-   &:hover::before,
-   &:hover::after {
-     background-color: @black;
-   }
-
-   &:active::before,
-   &:active::after {
-     background-color: @black;
-   }
+   background-image: url("../img/tel11x16.png");
+   background-repeat: no-repeat;
+   background-position: 0 0;
 }
 
 
