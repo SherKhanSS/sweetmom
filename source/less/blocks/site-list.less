@@ -21,8 +21,13 @@
 }
 
 .site-list__item {
-
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.site-list__item:first-child {
+  margin-top: 20px;
 }
 
 .site-list {
@@ -31,53 +36,60 @@
 }
 
 .site-list__item--active {
-
 }
 
-@media (max-width: @mobile-width-only) {
-  .site-list__item {
-    width: 100%;
-    text-align: center;
-  }
-
-  .site-list__item a {
-    color: @black;
-  }
-
-  .site-list__item:hover {
-
-  }
-  .site-list__item:active {
-
-  }
+.site-list__phone span {
+  width: 180px;
+  position: relative;
 }
+
+.site-list__phone span::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -30px;
+
+  width: 26px;
+  height: 26px;
+
+  background-image: url("../img/mobile_icon_black.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 1;
+}
+
+// @media (max-width: @mobile-width-only) {}
 
 @media (min-width: @tablet-width) {
-
+  .main-nav--opened .site-list {
+    margin-top: 100px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .site-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
   }
 
-  .site-list__item {
-    padding-top: 5px;
-    padding-bottom: 5px;
+  .site-list__item {}
+
+.site-list__item--phone {
+    display: none!important;
+  }
+
+  .site-list__item:first-child {
+    margin-top: 0px;
   }
 
   .site-list__item a {
-    margin-left: 10px;
-    margin-right: 20px;
-    padding-top: 3px;
-    padding-bottom: 7px;
+    padding: 27px 20px;
   }
 
   .site-list__item a:hover {
-
+    padding: 26px 20px;
   }
-  .site-list__item a:active {
-
-  }
+  .site-list__item a:active {}
 }
