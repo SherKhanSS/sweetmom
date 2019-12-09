@@ -1,0 +1,45 @@
+.application {
+
+  background-image: url("../img/fon.svg");
+	background-size: 21px 26px;
+	background-repeat: repeat;
+
+  &__side {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+
+    padding-top: 100px;
+  }
+
+  &__image {
+    width: 130px;
+    height: 130px;
+  }
+
+  &__problem {
+    font-weight: 500;
+  	font-size: 16px;
+  	line-height: 28px;
+  	color: @text-gray;
+  }
+
+  &__description {
+    font-size: 15px;
+    color: @text-gray;
+  }
+
+  @media (min-width: @tablet-width) {
+
+    &__main {
+      width: 40%;
+    }
+
+    &__problem {
+      font-size: 18px;
+
+      margin-top: 40px;
+    }
+  }
+
+}

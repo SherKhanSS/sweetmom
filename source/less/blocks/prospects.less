@@ -1,0 +1,47 @@
+.prospects {
+  &__list {
+  }
+
+  &__item {
+  }
+
+  &__image {
+    display: none;
+  }
+
+  &__side {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .prospects {
+    &__item {
+    }
+
+    &__image {
+      display: block;
+      width: 500px;
+      height: 400px;
+    }
+
+    &__side {
+      display: block;
+      position: relative;
+    }
+
+    &__link-youtube {
+      top: 150px;
+      left: -40px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .prospects {
+    &__wrapper {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.reach {
+  background-color: #c8f1f3;
+
+  &__wrapper {
+    padding: 30px;
+  }
+
+  &__first {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 100px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 118px;
+      left: 0px;
+      top: 50px;
+      background-image: url("../img/huynya.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  &__clinic {
+    font-family: "Fregat",sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: @text-variation;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    margin-bottom: 30px;
+  }
+
+  &__operation {
+    font-weight: 500;
+    font-style: normal;
+    color: @text-gray;
+    font-size: 26px;
+    line-height: 24.15px;
+    display: block;
+  }
+
+  &__year {
+    color: @text-gray-light;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__second {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__conditions {
+    color: @text-gray;
+    font-size: 20px;
+  }
+
+  &__line {
+    color: @text-gray;
+  }
+
+  &__third {
+    display: flex;
+  }
+
+  &__image {
+    width: 250px;
+    height: 200px;
+  }
+
+  &__third-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+
+
+
+
+}

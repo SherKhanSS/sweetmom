@@ -1,0 +1,153 @@
+.description {
+  background-color: @fon-main;
+	background-image: url("../img/fon.svg");
+	background-size: 21px 26px;
+	background-repeat: repeat;
+
+  &__wrapper {
+    padding: 20px 10px 20px 10px;
+  }
+
+  &__bottom {
+    .flex-mobile;
+  }
+
+  &__title {
+    font-family: "Fregat", sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0;
+  }
+
+  &__list {
+    .list-reset;
+    font-weight: 500;
+    margin-top: 30px;
+    color: @text-gray;
+  }
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__media {
+    display: none;
+  }
+
+  &__variation {
+    font-weight: 600;
+  }
+
+  &__price {
+    color: @text-gray-light;
+  }
+
+  &__price-link {
+    font-weight: 600;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .description {
+    font-size: 18px;
+
+    &__main {
+      max-width: 700px;
+    }
+
+    &__media {
+      position: relative;
+      width: 50%;
+      display: block;
+    }
+
+    &__wrapper {
+      padding: 60px 20px 60px 20px;
+    }
+
+    &__bottom {
+      flex-direction: row;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 36px;
+    }
+
+    &__list {
+      margin-top: 40px;
+      margin-bottom: 55px;
+    }
+
+    &__price {
+      margin-left: 50px;
+    }
+
+    &__image {
+      position: absolute;
+      top: -40px;
+      @media (min-width: 900px) {
+        top: -60px;
+        right: -20px;
+      }
+      @media (min-width: 1050px) {
+        top: -130px;
+        right: -70px;
+      }
+      border-radius: 50%;
+    }
+
+    &__link-youtube {
+      top: 58px;
+      left: 20px;
+    }
+
+    &__image-achievements {
+      display: none;
+    }
+
+    &__doctor {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description {
+
+    &__wrapper {
+      padding: 60px 70px 100px 70px;
+    }
+
+    &__title {
+      font-size: 42px;
+      line-height: 51px;
+    }
+
+    &__image {
+      top: -160px;
+      right: -150px;
+    }
+
+    &__link-youtube {
+      top: 58px;
+      left: 120px;
+    }
+
+    &__image-achievements {
+      display: block;
+      position: absolute;
+      top: 73px;
+      left: 230px;
+    }
+
+    &__doctor {
+      display: block;
+      position: absolute;
+      top: 170px;
+      left: 210px;
+    }
+  }
+}
